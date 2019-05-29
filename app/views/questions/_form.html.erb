@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <h1 class="display-3">Nueva Pregunta</h1>
+    <%= form_with(model: @question, local: true) do |f| %>
+        <fieldset>
+            <div class="form-group">
+                <%= f.text_field :title,  class: "form-control", placeholder: "Titulo" %>
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+                <%= f.text_area :content, class: "form-control", placeholder: "Contenido", rows: "9" %>
+            </div>
+            <%= f.submit "Preguntar", class: "btn btn-primary" %>
+        </fieldset>
+    <% end %>
+</div>

@@ -1,0 +1,18 @@
+<% @questions.each do |question| %>
+    <tr class="d-flex">
+        <td class="text-center">
+            <h3>1</h3>
+            <p class="text-secondary">Votos</p>
+        </td>
+        <td class="text-center">
+            <h3>1</h3>
+            <p class="text-secondary">Respuestas</p>
+        </td>
+        <td class="text-left pl-5">
+            <%= link_to  question_path(question) do%>
+                <h3><%= question.title %></h3>
+            <% end %>
+            <p class="text-secondary"><%= question.content %></p>
+        </td>
+    </tr>
+<% end %>
