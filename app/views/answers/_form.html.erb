@@ -1,0 +1,10 @@
+<div>
+    <%= form_for [@question, @answer], remote: true do |f| %>
+    <fieldset>
+        <div class="form-group">
+            <%= f.text_area :content, class: "form-control", id: "answer-box", placeholder: "Contenido", rows: "5" %>
+        </div>
+        <%= f.submit "Responder", class: "btn btn-primary" %>
+    </fieldset>
+    <% end %>
+</div>
