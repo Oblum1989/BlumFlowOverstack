@@ -1,0 +1,8 @@
+<%= form_for [commentable, @question.comments.new], remote: true do |f| %>
+    <fieldset>
+        <div class="form-group">
+            <%= f.text_area :content, class: "form-control", id: "comment-box", placeholder: "Agrega un comentario", rows: "2" %>
+        </div>
+        <%= f.submit "Comentar", class: "btn btn-primary" %>
+    </fieldset>
+<% end %>

@@ -1,0 +1,7 @@
+<span href="#" class="list-group-item flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+        <small><%= time_ago_in_words(comment.created_at) %>ago </small>
+    </div>
+    <p class="mb-1"><%= comment.content %></p>
+    <small>Commented by <%= comment.user.username %></small>
+</span>

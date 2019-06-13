@@ -8,7 +8,7 @@ class AnswersController < ApplicationController
     def create
         @question = Question.find(params[:question_id])
         @answer = @question.answers.build(answer_params)
-        
+
         respond_to do |format|
             if @answer.save
                 format.html { redirect_to question_path(@question) }
@@ -30,7 +30,7 @@ class AnswersController < ApplicationController
     private
 
         def answer_params
-            params.require(:answer).permit(:user_id, :question_id, :content, :rating)
+            params.require(:answer).permit(:content, :rating).merge(user: current_user)
         end
 
         def set_answer
