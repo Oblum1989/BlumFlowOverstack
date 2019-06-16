@@ -15,6 +15,13 @@ class CommentsController < ApplicationController
     def edit
     end
 
+    def destroy 
+        @question = Question.find(params[:id])   
+        @comment = @question.comments.find(params[:question_id])
+        @comment.destroy    
+        redirect_to question_path(@question)
+    end
+
     def show
         
     end

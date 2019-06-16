@@ -1,7 +1,7 @@
 <% @questions.each do |question| %>
     <tr class="d-flex">
         <td class="text-center">
-            <h3>1</h3>
+            <h3><%= question.votes.count %></h3>
             <p class="text-secondary">Votos</p>
         </td>
         <td class="text-center">
