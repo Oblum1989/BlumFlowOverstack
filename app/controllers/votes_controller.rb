@@ -7,7 +7,7 @@ class VotesController < ApplicationController
         else
             @answer = Answer.find(params[:answer_id])
             @vote = @answer.votes.create(user: current_user)
-            redirect_to question_path(@answer)
+            redirect_to question_path(@answer.question_id)
         end
     end
     
@@ -19,7 +19,7 @@ class VotesController < ApplicationController
         else
             @answer = Answer.find(params[:answer_id])
             @answer.votes.where(user: current_user).take.try(:destroy)
-            redirect_to question_path(@answer)
+            redirect_to question_path(@answer.question_id)
         end
     end
 

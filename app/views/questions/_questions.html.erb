@@ -12,7 +12,7 @@
             <%= link_to  question_path(question) do%>
                 <h3><%= question.title %></h3>
             <% end %>
-            <p class="text-secondary"><%= question.content %></p>
+            <p class="text-secondary"><%= markdown(question.content) %></p>
         </td>
     </tr>
 <% end %>

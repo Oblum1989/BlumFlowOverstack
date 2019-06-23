@@ -18,7 +18,7 @@
         </div>
         <div class="flex-grow-1" >
             <div>
-                <p><%= answer.content %></p>
+                <%= markdown(answer.content) %>
             </div>
             <div>
                 <div class="list-group" id="answer-comment-list">
