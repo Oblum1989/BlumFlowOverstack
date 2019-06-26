@@ -1,5 +1,5 @@
 <% @questions.each do |question| %>
-    <tr class="d-flex">
+    <tr class="d-flex" id="question-<%= question.id %>">
         <td class="text-center">
             <h3><%= question.votes.count %></h3>
             <p class="text-secondary">Votos</p>
@@ -13,6 +13,7 @@
                 <h3><%= question.title %></h3>
             <% end %>
             <p class="text-secondary"><%= markdown(question.content) %></p>
+            <%= link_to  'delete', question_path(question), remote: true, method: 'delete', data:{confirm: "Eliminar respuesta?"} %>
         </td>
     </tr>
 <% end %>

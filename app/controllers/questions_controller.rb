@@ -14,7 +14,8 @@ class QuestionsController < ApplicationController
         @question.user = current_user
         
         if @question.save 
-            redirect_to questions_path, notice: "La pregunta ha sido guardada exitosamente"
+            flash[:success] = 'La pregunta ha sido guardada exitosamente'
+            redirect_to questions_path
         else
             flash[:alert] = "La pregunta no ha sido guardada, por favor repetir la operacion"
             render :new
@@ -27,7 +28,18 @@ class QuestionsController < ApplicationController
     def show
         @answer = Answer.new
         # @comment = @question.comments.new
+    end
 
+    def destroy
+        
+        @question = Question.find(params[:id])
+        @question.destroy
+    
+        respond_to do |format|
+          format.html { redirect_to question_path }
+          format.js
+          flash[:success] = 'Respuesta eliminada correctamente'
+        end
     end
 
     private

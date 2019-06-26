@@ -1,0 +1,2 @@
+$("#answer-<%= @answer.id %>").remove()
+$('#count-answers').html('<%= pluralize(@question.answers.count, 'Respuesta', plural: 'Respuestas') %>');

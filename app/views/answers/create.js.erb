@@ -1,3 +1,4 @@
 $("<%= escape_javascript(render(@answer)) %>").appendTo('#answer-list');
-$('#answer-box').val('');
-$('#count-answers').html('<%= @question.answers.count() %>');
+const $codemirror = $('textarea[id="answer-box"]').nextAll('.CodeMirror')[0].CodeMirror;
+$codemirror.getDoc().setValue("");
+$('#count-answers').html('<%= pluralize(@question.answers.count, 'Respuesta', plural: 'Respuestas') %>');

@@ -12,11 +12,20 @@
 
 <body>
   <%= render  "layouts/navbar" %>
-  <!-- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
+
+  <% flash.each do |key, msg| %>
+    <div class="<%= flash_msg(key) %>">
+      <p><%=msg%></p>
+    </div>
+  <% end %>
+
   <div class="container">
     <%= yield %>
   </div>
+  <script>
+    $(".alert").fadeIn(500).css("opacity", "0.85").delay(5000).slideUp(1000);
+    $(".alerts").on('click', '.alert', function () { $(this).remove() });
+  </script>
 </body>
 
 </html>

@@ -1,10 +1,6 @@
 class AnswersController < ApplicationController
     before_action :set_answer, only: [:show]
 
-    def index
-        
-    end
-
     def create
         @question = Question.find(params[:question_id])
         @answer = @question.answers.build(answer_params)
@@ -12,19 +8,28 @@ class AnswersController < ApplicationController
         respond_to do |format|
             if @answer.save
                 format.html { redirect_to question_path(@question) }
-                format.js
+                format.js { flash.now[:success] = 'Respuesta agregada correctamente' }
             else
-                format.html {redirect_to question_path(@question), notice: 'Relply did not save. Please try again.' }
-                format.js
+                format.html {redirect_to question_path(@question)}
+                flash[:error] = 'La respuesta no se ha agregado correctamente'
             end
         end
     end
 
-    def edit
-    end
-
     def show
         
+    end
+
+    def destroy
+        @question = Question.find(params[:question_id])
+        @answer = @question.answers.find(params[:id])
+        @answer.destroy
+    
+        respond_to do |format|
+          format.html { redirect_to question_path(@question) }
+          format.js
+          flash[:success] = 'Respuesta eliminada correctamente'
+        end
     end
 
     private

@@ -1,5 +1,17 @@
 <div>
     <%= form_for [@question, @answer], remote: true do |f| %>
+    <% if @answer.errors.any? %>
+        <div id="errorExplanation">
+            <h2><%= pluralize(@answer.errors.count, "error") %> prohibited
+            this post from being saved:</h2>
+            <ul>
+            <% @answer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+            </ul>
+        </div>
+    <% end %>
+    
     <fieldset>
         <div class="form-group">
             <%= f.text_area :content, class: "form-control", id: "answer-box", placeholder: "Agrega un comentario", rows: "2", style: "overflow-y:auto; min-height: 10em;" %>

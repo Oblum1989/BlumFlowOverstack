@@ -1,4 +1,4 @@
-<div class="answer-<%= answer.id %>">
+<div class="answer" id="answer-<%= answer.id %>">
     <div class="d-flex mx-4 mb-4">
         <div class="mx-3 text-center">
             <% if answer.voted_by? current_user %>
@@ -19,6 +19,7 @@
         <div class="flex-grow-1" >
             <div>
                 <%= markdown(answer.content) %>
+                <%= link_to  'delete', [@question, answer], remote: true, method: 'delete', data:{confirm: "Eliminar respuesta?"} %>
             </div>
             <div>
                 <div class="list-group" id="answer-comment-list">
