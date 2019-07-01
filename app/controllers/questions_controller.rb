@@ -3,6 +3,10 @@ class QuestionsController < ApplicationController
 
     def index
         @questions = Question.all.order(created_at: :asc) 
+        if params[:search]
+            @search_term = params[:search]
+            @questions = Question.question_search_by(@search_term) 
+        end
     end
 
     def new

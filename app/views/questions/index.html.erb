@@ -5,9 +5,11 @@
             <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
         <div>
-            <p class="lead">
-                <%= link_to  "Hacer una pregunta", new_question_path, class: "btn btn-primary btn-lg" %>
-            </p>
+            <% if user_signed_in? %>
+                <p class="lead">
+                    <%= link_to  "Hacer una pregunta", new_question_path, class: "btn btn-primary btn-lg" %>
+                </p>
+            <% end %>
         </div>
     </div>
     <div>

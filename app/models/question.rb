@@ -9,4 +9,8 @@ class Question < ApplicationRecord
   def voted_by?(user)
     votes.exists?(user: user)
   end
+
+  def self.question_search_by(search_term) 
+    where(['LOWER(title) LIKE :search_term ', search_term: "%#{search_term.downcase}%"])
+  end
 end
