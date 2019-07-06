@@ -1,0 +1,15 @@
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/home/blum/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20190705-24797-hbkm5c.rb extconf.rb
+creating Makefile
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20190705-24797-1kzksf

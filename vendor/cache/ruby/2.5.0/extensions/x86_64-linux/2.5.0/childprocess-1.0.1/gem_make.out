@@ -1,0 +1,5 @@
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/childprocess-1.0.1/ext
+/home/blum/.rvm/rubies/ruby-2.5.1/bin/ruby mkrf_conf.rb
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/childprocess-1.0.1/ext
+/home/blum/.rvm/rubies/ruby-2.5.1/bin/ruby -rrubygems /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/rake-12.3.2/exe/rake RUBYARCHDIR=/home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/extensions/x86_64-linux/2.5.0/childprocess-1.0.1 RUBYLIBDIR=/home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/extensions/x86_64-linux/2.5.0/childprocess-1.0.1

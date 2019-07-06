@@ -1,0 +1,19 @@
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+/home/blum/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20190705-24797-1g5q5ub.rb extconf.rb
+creating Makefile
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -m 0755 byebug.so ./.gem.20190705-24797-15merxt/byebug

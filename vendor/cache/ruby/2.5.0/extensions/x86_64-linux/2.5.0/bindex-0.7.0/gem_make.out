@@ -1,0 +1,15 @@
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bindex-0.7.0/ext/skiptrace
+/home/blum/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20190705-24797-u0x6oj.rb extconf.rb
+creating Makefile
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/cruby.so
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20190705-24797-1r81akt/skiptrace

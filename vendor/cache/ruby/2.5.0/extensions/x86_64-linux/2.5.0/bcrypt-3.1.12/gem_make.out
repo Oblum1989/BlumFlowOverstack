@@ -1,0 +1,19 @@
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+/home/blum/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20190705-24797-1kmym9e.rb extconf.rb
+creating Makefile
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/blum/Escritorio/proyectos/ROR/FlowOverstack/vendor/cache/ruby/2.5.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.so ./.gem.20190705-24797-cg09dm
