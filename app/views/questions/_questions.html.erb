@@ -10,10 +10,15 @@
         </td>
         <td class="text-left pl-5">
             <%= link_to  question_path(question) do%>
-                <h3><%= question.title %></h3>
+                <h3><%= markdown(question.title) %></h3>
             <% end %>
             <p class="text-secondary"><%= markdown(question.content) %></p>
-            <%= link_to  'delete', question_path(question), remote: true, method: 'delete', data:{confirm: "Eliminar respuesta?"} %>
+            <% if user_signed_in?%>
+                <% if current_user.id == question.user_id %>
+                    <%= link_to  'delete', question_path(question), remote: true, method: 'delete', data:{confirm: "Eliminar pregunta?"} %>
+                <% end %>
+            <% end %>
+            
         </td>
     </tr>
 <% end %>

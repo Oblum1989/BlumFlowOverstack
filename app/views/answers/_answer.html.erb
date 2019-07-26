@@ -19,7 +19,11 @@
         <div class="flex-grow-1" >
             <div>
                 <%= markdown(answer.content) %>
-                <%= link_to  'delete', [@question, answer], remote: true, method: 'delete', data:{confirm: "Eliminar respuesta?"} %>
+                <% if user_signed_in?%>
+                <% if current_user.id == answer.user_id %>
+                    <%= link_to  'delete', [@question, answer], remote: true, method: 'delete', data:{confirm: "Eliminar respuesta?"} %>
+                <% end %>
+            <% end %>
             </div>
             <div>
                 <div class="list-group" id="answer-comment-list">

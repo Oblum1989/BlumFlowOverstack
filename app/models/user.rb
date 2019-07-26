@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_many :answers
   has_many :comments
 
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
+  validates :email, uniqueness: true
+  validates :password, presence: true
+
   def username
     self.email.split('@')[0]
   end

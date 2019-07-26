@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+    before_action :authenticate_user!, except: [:index, :show]
     before_action :set_question, only: [:show]
 
     def index
@@ -42,7 +43,7 @@ class QuestionsController < ApplicationController
         respond_to do |format|
           format.html { redirect_to question_path }
           format.js
-          flash[:success] = 'Respuesta eliminada correctamente'
+          flash[:success] = 'Pregunta eliminada correctamente'
         end
     end
 

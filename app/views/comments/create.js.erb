@@ -2,7 +2,7 @@
     $("<%= escape_javascript(render(@comment)) %>").appendTo('#question-comment-list');
     $('#comment-box').val('');
 <% else %>
-    $("<%= escape_javascript(render(@comment)) %>").appendTo('.answer-<%= @comment.commentable_id %> #answer-comment-list');
+    $("<%= escape_javascript(render(@comment)) %>").appendTo('#answer-comment-list');
     $('#form-comments-answer #comment-box').val('');
 <% end %>
 
